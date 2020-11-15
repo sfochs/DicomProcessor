@@ -13,3 +13,10 @@ Given an architecture of directories and DICOM Images:
 (5) save and apply changes throughout all DICOMS
 * edited files are saved as new files with a .dcm extension
 * new files are saved in new folders with prefix "sorted-" under the same parent folder
+
+
+How to run Run:
+
+Change the file path, *fpath*, in main.py
+
+    python3 main.py
