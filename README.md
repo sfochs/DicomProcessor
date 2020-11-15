@@ -15,7 +15,7 @@ Given an architecture of directories and DICOM Images:
 * new files are saved in new folders with prefix "sorted-" under the same parent folder
 
 
-How to run Run:
+# How to Run:
 
 Change the file path, *fpath*, in main.py
 
