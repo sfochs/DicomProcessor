@@ -29,7 +29,7 @@ def changesortsave(datadirs, alterations):
                 # TODO: Change ds via alterations
                 for data_element in ds:
                     if data_element.name in alterations:
-                        print("modifying " + data_element.name + " from " +  data_element.repval + " to " + alterations[data_element.name])
+                        # print("modifying " + data_element.name + " from " +  data_element.repval + " to " + alterations[data_element.name])
                         data_element.value = alterations[data_element.name]
 
                 if first == 0:
