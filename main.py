@@ -20,7 +20,8 @@ from changesortsave import *
 # data from: https://www.dicomlibrary.com/?manage=1b9baeb16d2aeba13bed71045df1bc65
 # pydicom man pages: https://pydicom.github.io/pydicom/stable/index.html
 
-fpath = "/Users/sarahfochs/Desktop/DicomImages/"
+# fpath = "/Users/sarahfochs/Desktop/DicomImages/"
+fpath = "/Users/davidnascene/code/pythonDICOM/DICOM/knee"
 
 # datadirs is a list of directories with DICOM data
 datadirs = traverse(fpath)
