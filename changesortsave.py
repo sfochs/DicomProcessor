@@ -65,5 +65,4 @@ def changesortsave(datadirs, alterations):
             elif imagenum < 100:
                 fw.dcmwrite(parentdir + newdir + "/image-0" + str(imagenum) + ".dcm", s[0])
 
-            # fw.dcmwrite(parentdir + newdir + "/image-" + str(imagenum), s[0])
             imagenum = imagenum + 1
