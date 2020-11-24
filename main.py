@@ -20,22 +20,33 @@ from changesortsave import *
 # data from: https://www.dicomlibrary.com/?manage=1b9baeb16d2aeba13bed71045df1bc65
 # pydicom man pages: https://pydicom.github.io/pydicom/stable/index.html
 
-fpath = "/Users/sarahfochs/Desktop/DicomImages/"
+fpath = "/Users/sarahfochs/Desktop/knee2/"
 
 # datadirs is a list of directories with DICOM data
 datadirs = traverse(fpath)
 
-# plots used to store dicom pixel data
 plots = []
+names = []
 
 # datasets is a list of pydicom dictionaries
-datasets, plots = getdatasets(datadirs, plots)
+datasets, plots = getdatasets(datadirs, plots, names)
 
 # elements and private_elem are dictionaries of the DICOM pre-edit
 elements, private_elem = elementdicts(datasets)
 
+
 # matplotlib viewer
-dicomviewer(plots)
+
+print("Enter a number to view dicom: ")
+print("<ENTER>\t: Skip")
+for i in range(1, len(names)):
+    print(str(i) + ": " + names[i])
+
+num = input()
+
+if num:
+    dicomviewer(plots[int(num)-1], names[int(num)-1])
+
 
 # final_elements is a dictionary of the DICOM post-edit
 final = tkinterform(elements)

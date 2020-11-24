@@ -12,9 +12,10 @@ from tkinter import ttk
 matplotlib.use("TkAgg")
 
 # 2. Extract out DICOM data
-def getdatasets(datadirs, plots):
+def getdatasets(datadirs, plots, names):
     datasets = []
     for dcmdir in datadirs:
+        plot = []
         print("Now traversing" + dcmdir)
         for f in glob.glob(dcmdir + '/*'):
             if not os.path.isdir(f):
@@ -24,6 +25,8 @@ def getdatasets(datadirs, plots):
                 # print(ds[0x20,0x32].value[2])
                 pix = ds.pixel_array
                 pix = pix*1+(-1024)
-                plots.append(pix)
+                plot.append(pix)
+        plots.append(plot)
+        names.append(dcmdir)
 
     return datasets, plots

@@ -11,8 +11,9 @@ from tkinter import *
 from tkinter import ttk
 matplotlib.use("TkAgg")
 
-# 4. Visualization with matplotlib
 fig, ax = plt.subplots(1,1)
+
+# 4. Visualization with matplotlib
 class IndexTracker(object):
     def __init__(self, ax, X):
         self.ax = ax
@@ -38,8 +39,9 @@ class IndexTracker(object):
         ax.set_ylabel('Slice Number: %s' % self.ind)
         self.im.axes.figure.canvas.draw()
 
-def dicomviewer(plots):
-    y = np.dstack(plots)
+def dicomviewer(plot, name):
+    y = np.dstack(plot)
     tracker = IndexTracker(ax, y)
+    fig.canvas.set_window_title(name)
     fig.canvas.mpl_connect('scroll_event', tracker.onscroll)
     plt.show()
