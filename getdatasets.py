@@ -20,6 +20,7 @@ def getdatasets(datadirs, plots, names):
         for f in glob.glob(dcmdir + '/*'):
             if not os.path.isdir(f):
                 ds = pydicom.dcmread(f)
+                ds.add_new([0x0009, 0x103e], 'SH', dcmdir)
                 datasets.append(ds)
 
                 # print(ds[0x20,0x32].value[2])
