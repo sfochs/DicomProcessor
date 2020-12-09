@@ -1,16 +1,3 @@
-import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
-import os, glob, stat
-import pydicom
-import pydicom.filewriter as fw
-import pylab as pl
-import sys
-import matplotlib.path as mplPath
-from tkinter import *
-from tkinter import ttk
-matplotlib.use("TkAgg")
-
 # 3. Get all DICOM attributes
 def elementdicts(datasets):
     elements = {}

@@ -1,16 +1,6 @@
-import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
-import os, glob, stat
+import os, glob
 import pydicom
-import pydicom.filewriter as fw
-import pylab as pl
-import sys
-import matplotlib.path as mplPath
-from tkinter import *
-from tkinter import ttk
-from pydicom.filereader import InvalidDicomError
-matplotlib.use("TkAgg")
+
 # data from: https://www.dicomlibrary.com/?manage=1b9baeb16d2aeba13bed71045df1bc65
 # pydicom man pages: https://pydicom.github.io/pydicom/stable/index.html
 
