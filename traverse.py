@@ -15,6 +15,7 @@ def traverse(fpath):
             try:
                 if not os.path.isdir(f):
                     pydicom.dcmread(f)
+                    d = d.replace("\\", "/")
                     datadirs.append(d)
                     break
             except:
